@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: owens-tiktok-vault
+    runtime: static
+    staticPublishPath: .
+    headers:
+      - path: /*.mp4
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /thumbs/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
