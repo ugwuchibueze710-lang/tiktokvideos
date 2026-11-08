@@ -321,7 +321,7 @@ const Hero = (()=>{
     const glass=new THREE.Mesh(screenGeo(W-0.03,H-0.03,0.09),new THREE.MeshPhysicalMaterial({color:0xffffff,transparent:true,opacity:0.08,roughness:0.02,metalness:0,clearcoat:1,envMapIntensity:2.2,depthWrite:false}));
     glass.position.z=D/2+0.003; g.add(glass);
     // dynamic island
-    const isl=new THREE.Mesh(new RoundedBoxGeometry(0.2,0.055,0.002,3,0.027),new THREE.MeshBasicMaterial({color:0x000000}));
+    const isl=new THREE.Mesh(screenGeo(0.2,0.056,0.028),new THREE.MeshBasicMaterial({color:0x000000}));
     isl.position.set(0,H/2-0.085,D/2+0.004); g.add(isl);
     // camera bump on back
     const bump=new THREE.Mesh(new RoundedBoxGeometry(0.32,0.32,0.03,4,0.07),backMat);
